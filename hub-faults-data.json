@@ -1,0 +1,1099 @@
+[
+  {
+    "metadata": {
+      "name": "aws",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "AWS",
+      "faults": [
+        {
+          "name": "ecs-instance-stop",
+          "displayName": "ECS Instance Stop",
+          "description": "It injects ecs-instance-stop chaos on ECS cluster",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "clb-az-down",
+          "displayName": "CLB AZ Down",
+          "description": "It injects AZ down chaos on CLB for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "alb-az-down",
+          "displayName": "ALB AZ Down",
+          "description": "It injects AZ down chaos on ALB for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-network-loss",
+          "displayName": "ECS Container Network Loss",
+          "description": "It injects ecs-container-network-loss chaos on a AWS ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-network-latency",
+          "displayName": "ECS Container Network Latency",
+          "description": "It injects ecs-container-network-latency chaos on a AWS ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-cpu-hog",
+          "displayName": "ECS Container CPU Hog",
+          "description": "It injects ecs-container-cpu-hog chaos on the task container of ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-io-stress",
+          "displayName": "ECS Container IO Stress",
+          "description": "It injects ecs-container-io-stress chaos on the task container of ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-memory-hog",
+          "displayName": "ECS Container Memory Hog",
+          "description": "It injects ecs-container-memory-hog chaos on the task container of ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-cpu-hog",
+          "displayName": "EC2 CPU Hog",
+          "description": "It injects CPU stress chaos on AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-io-stress",
+          "displayName": "EC2 IO Stress",
+          "description": "It injects IO stress chaos on the AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-memory-hog",
+          "displayName": "EC2 Memory Hog",
+          "description": "It injects Memory stress chaos on the AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-network-loss",
+          "displayName": "EC2 Network Loss",
+          "description": "It injects Network loss chaos on the AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-network-latency",
+          "displayName": "EC2 Network Latency",
+          "description": "It injects Network latency chaos on the AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-agent-stop",
+          "displayName": "ECS Agent Stop",
+          "description": "It stops all the ECS agent container running on the container instances of ECS cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "aws-ssm-chaos-by-id",
+          "displayName": "AWS SSM Chaos By ID",
+          "description": "It allow to perform in-VM chaos using AWS SSM service and EC2 instance ID.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "aws-ssm-chaos-by-tag",
+          "displayName": "AWS SSM Chaos By Tag",
+          "description": "It allow to perform in-VM chaos using AWS SSM service and EC2 instance tag.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-stop-by-id",
+          "displayName": "EC2 Stop By ID",
+          "description": "It stops the AWS EC2 instance identified by ID for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-stop-by-tag",
+          "displayName": "EC2 Stop By Tag",
+          "description": "It stops the AWS EC2 instance identified by Tag for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-http-latency",
+          "displayName": "EC2 HTTP Latency",
+          "description": "It injects ec2-http-latency chaos on AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-http-modify-body",
+          "displayName": "EC2 HTTP Modify Body",
+          "description": "It injects ec2-http-modify-body chaos on AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-http-status-code",
+          "displayName": "EC2 HTTP Status Code",
+          "description": "It injects ec2-http-status-code chaos on AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-http-reset-peer",
+          "displayName": "EC2 HTTP Reset Peer",
+          "description": "It injects ec2-http-reset-peer chaos on AWS EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ebs-loss-by-id",
+          "displayName": "EBS Loss By ID",
+          "description": "It detach the EBS volume from AWS EC2 instance identified by ID for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ebs-loss-by-tag",
+          "displayName": "EBS Loss By Tag",
+          "description": "It detach the EBS volume from AWS EC2 instance identified by Tag for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "rds-instance-delete",
+          "displayName": "RDS Instance Delete",
+          "description": "It injects the rds-instance-delete chaos on the RDS instances/cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "rds-instance-reboot",
+          "displayName": "RDS Instance Reboot",
+          "description": "It injects the rds-instance-reboot chaos on the RDS instances/cluster.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-dns-chaos",
+          "displayName": "EC2 DNS Chaos",
+          "description": "It injects the DNS chaos into EC2 instances for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ec2-process-kill",
+          "displayName": "EC2 Process Kill",
+          "description": "It injects the process-kill chaos into EC2 instances for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-delete-function-concurrency",
+          "displayName": "Lambda Delete Function Concurrency",
+          "description": "It injects lambda-delete-function-concurrency to the lambda function for a certain chaos duration",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-toggle-event-mapping-state",
+          "displayName": "Lambda Toggle Event Mapping State",
+          "description": "It injects chaos to toggle event source mapping state for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-delete-event-source-mapping",
+          "displayName": "Lambda Delete Event Source Mapping",
+          "description": "It injects deletion of event source mapping for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-update-function-memory",
+          "displayName": "Lambda Update Function Memory",
+          "description": "It updates the memory of the lambda function for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-update-function-timeout",
+          "displayName": "Lambda Update Function Timeout",
+          "description": "It updates the timeout of the lambda function for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-function-layer-detach",
+          "displayName": "Lambda Function Layer Detach",
+          "description": "It updates the layers of the lambda function to detach for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "lambda-update-role-permission",
+          "displayName": "Lambda Update Role Permission",
+          "description": "It updates the role of the lambda function to detach/update for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-task-stop",
+          "displayName": "ECS Task Stop",
+          "description": "It injects the ecs-task-stop chaos to ecs tasks/service for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-task-scale",
+          "displayName": "ECS Task Scale",
+          "description": "It injects the ecs-task-scale chaos to ecs service for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "resource-access-restrict",
+          "displayName": "Resource Access Restrict",
+          "description": "It injects the resource-access-restrict chaos in the given AWS region for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "windows-ec2-blackhole-chaos",
+          "displayName": "Windows EC2 Blackhole Chaos",
+          "description": "It injects blackhole chaos on AWS Windows EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "windows-ec2-cpu-hog",
+          "displayName": "Windows EC2 CPU Hog",
+          "description": "It injects CPU stress chaos on AWS Windows EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "windows-ec2-memory-hog",
+          "displayName": "Windows EC2 Memory Hog",
+          "description": "It injects memory stress chaos on AWS Windows EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-http-latency",
+          "displayName": "ECS Container HTTP Latency",
+          "description": "It injects http latency chaos on AWS ECS container.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-http-modify-body",
+          "displayName": "ECS Container HTTP Modify Body",
+          "description": "It injects http modify body chaos on AWS ECS instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-http-modify-header",
+          "displayName": "ECS Container Modify Header",
+          "description": "It injects http header chaos on AWS ECS instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-http-reset-peer",
+          "displayName": "ECS Container HTTP Reset Peer",
+          "description": "It injects http reset peer chaos on AWS ECS instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-http-status-code",
+          "displayName": "ECS Container HTTP Status Code",
+          "description": "It injects http status code chaos on AWS ECS instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-invalid-container-image",
+          "displayName": "ECS Invalid Container Image",
+          "description": "It injects the ecs-invalid-container-image chaos to ecs service for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-update-container-timeout",
+          "displayName": "ECS Update Container Timeout",
+          "description": "It injects the ecs-update-container-timeout chaos to ecs service for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-update-container-resource-limit",
+          "displayName": "ECS Update Container Resource Limit",
+          "description": "It injects the ecs-update-container-resource-limit chaos to ecs service for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-update-task-role",
+          "displayName": "ECS Update Task Role",
+          "description": "It injects the ecs-update-task-role chaos to ecs service for a specified chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-network-restrict",
+          "displayName": "ECS Network Restrict",
+          "description": "It injects ecs network restrict chaos on AWS ECS service.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-fargate-cpu-hog",
+          "displayName": "ECS Fargate CPU Hog",
+          "description": "It injects ecs fargate cpu hog chaos on AWS ECS service.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-fargate-memory-hog",
+          "displayName": "ECS Fargate Memory Hog",
+          "description": "It injects ecs fargate memory hog chaos on AWS ECS service.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "ecs-container-volume-detach",
+          "displayName": "ECS Container Volume Detach",
+          "description": "It injects ecs container volume detach chaos on AWS ECS service.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "nlb-az-down",
+          "displayName": "NLB AZ Down",
+          "description": "It injects nlb-az-down chaos on AWS network load balancer.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "windows-ec2-network-latency",
+          "displayName": "Windows EC2 Network Latency",
+          "description": "It injects windows-ec2-network-latency chaos on AWS windows EC2 instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "windows-ec2-network-loss",
+          "displayName": "Windows EC2 Network Loss",
+          "description": "It injects windows-ec2-network-loss chaos on AWS windows EC2 instance.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "azure",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Azure",
+      "faults": [
+        {
+          "name": "azure-instance-cpu-hog",
+          "displayName": "Azure Instance CPU Hog",
+          "description": "It injects CPU stress fault on the task container of the Azure VM instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-instance-io-stress",
+          "displayName": "Azure Instance IO Stress",
+          "description": "It injects IO stress fault on the task container of the Azure VM instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-instance-memory-hog",
+          "displayName": "Azure Instance Memory Hog",
+          "description": "It injects Memory stress fault on the task container of the Azure VM instance.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-disk-loss",
+          "displayName": "Azure Disk Loss",
+          "description": "It injects Azure disk loss fault from an Azure VM instance for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-instance-stop",
+          "displayName": "Azure Instance Stop",
+          "description": "It injects the Azure VM instance stop fault for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-web-app-access-restrict",
+          "displayName": "Azure Web App Access Restrict",
+          "description": "It injects Azure web app access restrict for a certain chaos duration.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "azure-web-app-stop",
+          "displayName": "Azure Web App Stop",
+          "description": "It injects Azure web app stop fault for a certain chaos duration",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "cloud-foundry",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Cloud Foundry",
+      "faults": [
+        {
+          "name": "cf-app-stop",
+          "displayName": "CF App Stop",
+          "description": "It injects cf-app-stop fault for CF apps.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "gcp",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "GCP",
+      "faults": [
+        {
+          "name": "gcp-vm-instance-stop",
+          "displayName": "GCP VM Instance Stop",
+          "description": "It injects gcp-vm-instance-stop fault into GCP VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "gcp-vm-instance-stop-by-label",
+          "displayName": "GCP VM Instance Stop By Label",
+          "description": "It injects gcp-vm-instance-stop-by-label fault into GCP VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "gcp-vm-disk-loss-by-label",
+          "displayName": "GCP VM Disk Loss By Label",
+          "description": "It injects gcp-vm-disk-loss-by-label fault into GCP VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "gcp-vm-disk-loss",
+          "displayName": "GCP VM Disk Loss",
+          "description": "It injects gcp-vm-disk-loss fault into GCP VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "gcp-vm-service-kill",
+          "displayName": "GCP VM Service Kill",
+          "description": "It injects gcp-vm-service-kill on node VM instance.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "kube-resilience",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Kube Resilience",
+      "faults": [
+        {
+          "name": "kubelet-density",
+          "displayName": "Kubelet Density",
+          "description": "It simulates a pod storm (with a specified count) on the cluster and verifies readiness within a desired timeout.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "kubernetes",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Kubernetes",
+      "faults": [
+        {
+          "name": "pod-delete",
+          "displayName": "Pod Delete",
+          "description": "It injects pod-delete chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "container-kill",
+          "displayName": "Container Kill",
+          "description": "It injects container-kill chaos in a Kubernetes pod .",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-cpu-hog",
+          "displayName": "Pod CPU Hog",
+          "description": "It injects cpu-hog chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-loss",
+          "displayName": "Pod Network Loss",
+          "description": "It injects network-loss chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-latency",
+          "displayName": "Pod Network Latency",
+          "description": "It injects network-latency chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-corruption",
+          "displayName": "Pod Network Corruption",
+          "description": "It injects network-corruption chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-drain",
+          "displayName": "Node Drain",
+          "description": "It injects node-drain chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-network-loss",
+          "displayName": "Node Network Loss",
+          "description": "It injects network loss chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-cpu-hog",
+          "displayName": "Node CPU Hog",
+          "description": "It injects node-cpu-hog chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-network-latency",
+          "displayName": "Node Network Latency",
+          "description": "It injects node-network-latency chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-restart",
+          "displayName": "Node Restart",
+          "description": "It injects node-restart chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "disk-fill",
+          "displayName": "Disk Fill",
+          "description": "It injects disk-fill chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-memory-hog",
+          "displayName": "Node Memory Hog",
+          "description": "It injects node-memory-hog chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-memory-hog",
+          "displayName": "Pod Memory Hog",
+          "description": "It injects pod-memory-hog chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "kubelet-service-kill",
+          "displayName": "Kubelet Service Kill",
+          "description": "It injects kubelet-service-kill chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-duplication",
+          "displayName": "Pod Network Duplication",
+          "description": "It injects pod-network-duplication chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-taint",
+          "displayName": "Node Taint",
+          "description": "It injects node-taint chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-autoscaler",
+          "displayName": "Pod Autoscaler",
+          "description": "It injects pod-autoscaler chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "node-io-stress",
+          "displayName": "Node IO Stress",
+          "description": "It injects node-io-stress chaos in a Kubernetes node.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-io-stress",
+          "displayName": "Pod IO Stress",
+          "description": "It injects pod-io-stress chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-dns-error",
+          "displayName": "Pod DNS Error",
+          "description": "It injects pod-dns-error chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-dns-spoof",
+          "displayName": "Pod DNS Spoof",
+          "description": "It injects pod-dns-spoof chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-cpu-hog-exec",
+          "displayName": "Pod CPU Hog Exec",
+          "description": "It injects pod-cpu-hog-exec chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-memory-hog-exec",
+          "displayName": "Pod Memory Hog Exec",
+          "description": "It injects pod-memory-hog-exec chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-partition",
+          "displayName": "Pod Network Partition",
+          "description": "It injects pod-network-partition chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-http-latency",
+          "displayName": "Pod HTTP Latency",
+          "description": "It injects pod-http-latency chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-http-status-code",
+          "displayName": "Pod HTTP Status Code",
+          "description": "It injects pod-http-status-code chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-http-modify-header",
+          "displayName": "Pod HTTP Modify Header",
+          "description": "It injects pod-http-modify-header chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-http-modify-body",
+          "displayName": "Pod HTTP Modify Body",
+          "description": "It injects pod-http-modify-body chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-http-reset-peer",
+          "displayName": "Pod HTTP Reset Peer",
+          "description": "It injects pod-http-reset-peer chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "time-chaos",
+          "displayName": "Time Chaos",
+          "description": "It injects time-chaos in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-io-latency",
+          "displayName": "Pod IO Latency",
+          "description": "It injects pod-io-latency in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-io-error",
+          "displayName": "Pod IO Error",
+          "description": "It injects pod-io-error in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-io-attribute-override",
+          "displayName": "Pod IO Attribute Override",
+          "description": "It injects pod-io-attribute-override in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-api-latency",
+          "displayName": "Pod API Latency",
+          "description": "It injects pod-api-latency in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-api-status-code",
+          "displayName": "Pod API Status Code",
+          "description": "It injects pod-api-status-code in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-api-modify-header",
+          "displayName": "Pod API Modify Header",
+          "description": "It injects pod-api-modify-header in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-api-modify-body",
+          "displayName": "Pod API Modify Body",
+          "description": "It injects pod-api-modify-body in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-api-block",
+          "displayName": "Pod API Block",
+          "description": "It injects pod-api-block in a Kubernetes pod.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "pod-network-rate-limit",
+          "displayName": "Pod Network Rate Limit",
+          "description": "It injects pod-network-rate-limit in a Kubernetes pod.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "linux",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Linux",
+      "faults": [
+        {
+          "name": "linux-cpu-stress",
+          "displayName": "Linux CPU Stress",
+          "description": "It injects cpu stress to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-process-kill",
+          "displayName": "Linux Process Kill",
+          "description": "It can kill the processes running on a Linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-service-restart",
+          "displayName": "Linux Service Restart",
+          "description": "It stops and then restarts services running on a Linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-time-chaos",
+          "displayName": "Linux Time Chaos",
+          "description": "It offsets the system time for a certain duration in a Linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-network-latency",
+          "displayName": "Linux Network Latency",
+          "description": "It injects network latency to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-network-loss",
+          "displayName": "Linux Network Loss",
+          "description": "It injects network loss to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-network-corruption",
+          "displayName": "Linux Network Corruption",
+          "description": "It injects network corruption to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-network-duplication",
+          "displayName": "Linux Network Duplication",
+          "description": "It injects network duplication to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-network-rate-limit",
+          "displayName": "Linux Network Rate Limit",
+          "description": "It injects network rate limit to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-dns-error",
+          "displayName": "Linux DNS Error",
+          "description": "It injects dns error to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-dns-spoof",
+          "displayName": "Linux DNS Spoof",
+          "description": "It injects dns spoof to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-memory-stress",
+          "displayName": "Linux Memory Stress",
+          "description": "It injects memory stress to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-disk-io-stress",
+          "displayName": "Linux Disk I/O Stress",
+          "description": "It injects Disk I/O stress to a linux VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "linux-disk-fill",
+          "displayName": "Linux Disk Fill",
+          "description": "It injects disk fill to a linux VM.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "load",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Load",
+      "faults": [
+        {
+          "name": "locust-loadgen-chaos",
+          "displayName": "Locust Loadgen Chaos",
+          "description": "It injects load on the given target hosts for a specified chaos duration",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "spring-boot",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "Spring Boot",
+      "faults": [
+        {
+          "name": "spring-boot-app-kill",
+          "displayName": "Spring Boot App Kill",
+          "description": "It injects app-kill chaos in a spring-boot application.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "spring-boot-cpu-stress",
+          "displayName": "Spring Boot CPU Stress",
+          "description": "It injects cpu-stress chaos in a spring-boot application.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "spring-boot-memory-stress",
+          "displayName": "Spring Boot Memory Stress",
+          "description": "It injects memory-stress chaos in a spring-boot application.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "spring-boot-latency",
+          "displayName": "Spring Boot Latency",
+          "description": "It injects network-latency chaos in a spring-boot application.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "spring-boot-exceptions",
+          "displayName": "Spring Boot Exceptions",
+          "description": "It injects exceptions chaos in a spring-boot application.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "spring-boot-faults",
+          "displayName": "Spring Boot Faults",
+          "description": "It injects faults in a spring-boot application.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "ssh",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "SSH",
+      "faults": [
+        {
+          "name": "ssh-chaos",
+          "displayName": "SSH Chaos",
+          "description": "Injects chaos on the target VM over ssh connection with custom chaos logic for a specified chaos duration.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  },
+  {
+    "metadata": {
+      "name": "vmware",
+      "__typename": "Metadata"
+    },
+    "spec": {
+      "displayName": "VMware",
+      "faults": [
+        {
+          "name": "vm-poweroff",
+          "displayName": "VMware VM Poweroff",
+          "description": "It injects power-off chaos on VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-disk-loss",
+          "displayName": "VMware Disk Loss",
+          "description": "It injects disk loss chaos for VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vm-process-kill",
+          "displayName": "VMware VM Process Kill",
+          "description": "It injects process kill chaos on a VMware VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vm-service-stop",
+          "displayName": "VMware VM Service Stop",
+          "description": "It injects service stop chaos on a VMware VM.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-network-latency",
+          "displayName": "VMware Network Latency",
+          "description": "It injects network latency chaos on the provided VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-network-loss",
+          "displayName": "VMware Network Loss",
+          "description": "It injects network loss chaos on the provided VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-network-rate-limit",
+          "displayName": "VMware Network Rate Limit",
+          "description": "It injects network rate limit chaos on the provided VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-http-latency",
+          "displayName": "VMware HTTP Latency",
+          "description": "It injects HTTP latency chaos on the provided VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-http-reset-peer",
+          "displayName": "VMware HTTP Reset Peer",
+          "description": "It injects HTTP reset peer chaos on the provided VMware VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-http-response-modify",
+          "displayName": "VMware HTTP Response Modify",
+          "description": "It injects HTTP response modify chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-cpu-hog",
+          "displayName": "VMware CPU Hog",
+          "description": "It injects VMware CPU hog chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-memory-hog",
+          "displayName": "VMware Memory Hog",
+          "description": "It injects VMware memory hog chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-io-stress",
+          "displayName": "VMware IO Stress",
+          "description": "It injects VMware IO stress chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-dns-chaos",
+          "displayName": "VMware DNS Chaos",
+          "description": "It injects VMware DNS error chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-host-reboot",
+          "displayName": "VMware Host Reboot",
+          "description": "It injects VMware host reboot chaos on the provided Hosts.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-cpu-hog",
+          "displayName": "VMware Windows CPU Hog",
+          "description": "It injects VMware windows CPU hog chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-memory-hog",
+          "displayName": "VMware Windows Memory Hog",
+          "description": "It injects VMware windows memory hog chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-service-stop",
+          "displayName": "VMware Windows Service Stop",
+          "description": "It injects VMware windows service stop chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-process-kill",
+          "displayName": "VMware Windows Process kill",
+          "description": "It injects VMware windows process kill chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-disk-stress",
+          "displayName": "VMware Windows Disk Stress",
+          "description": "It injects VMware windows disk stress chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-network-loss",
+          "displayName": "VMware Windows Network Loss",
+          "description": "It injects VMware windows Network loss chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-network-latency",
+          "displayName": "VMware Windows Network Latency",
+          "description": "It injects VMware windows Network Latency chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-network-corruption",
+          "displayName": "VMware Windows Network Corruption",
+          "description": "It injects VMware windows Network Corruption chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-network-duplication",
+          "displayName": "VMware Windows Network Duplication",
+          "description": "It injects VMware windows Network Duplication chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-blackhole-chaos",
+          "displayName": "VMware Windows Blackhole Chaos",
+          "description": "It injects VMware windows Blackhole chaos on the provided VMs.",
+          "__typename": "FaultList"
+        },
+        {
+          "name": "vmware-windows-time-chaos",
+          "displayName": "VMware Windows Time Chaos",
+          "description": "It injects VMware windows time chaos on the provided VMs.",
+          "__typename": "FaultList"
+        }
+      ],
+      "__typename": "Spec"
+    },
+    "__typename": "Chart"
+  }
+]
